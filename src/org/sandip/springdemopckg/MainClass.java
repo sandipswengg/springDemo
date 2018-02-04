@@ -17,7 +17,10 @@ public class MainClass {
 		Emp accountEmp = (Emp)context.getBean("accountEmpBean");
 		
 		emp.getDetails();
+		emp.getAllResources();
+		
 		accountEmp.getDetails();
+		accountEmp.getAllResources();
 		
 	}
 	

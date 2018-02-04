@@ -6,14 +6,30 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
    <bean id='ITEmpBean' class ="org.sandip.springdemopckg.Emp">
-		<constructor-arg ref='itEngg'></constructor-arg>
+		<!-- <constructor-arg ref='itEngg'></constructor-arg> -->
+		<property name="iTypes" ref="itEngg"></property>
    </bean>
-   <bean id ='itEngg' class = "org.sandip.springdemopckg.ITEngineer"></bean>	
+   <bean id ='itEngg' class = "org.sandip.springdemopckg.ITEngineer">
+   		<property name ='emps'>
+   			<list>
+   				<value>Sandip</value>
+   				<value>Manoj</value>
+   			</list>
+   		</property>
+   </bean>	
    
    
    <bean id='accountEmpBean' class ="org.sandip.springdemopckg.Emp">
-		<constructor-arg ref='accountEmp'></constructor-arg>
+		<!-- <constructor-arg ref='accountEmp'></constructor-arg>-->
+		<property name="iTypes" ref="accountEmp"></property>
    </bean>
-   <bean id ='accountEmp' class = "org.sandip.springdemopckg.AccountEmp"></bean>   
+   <bean id ='accountEmp' class = "org.sandip.springdemopckg.AccountEmp">
+   		<property name ='emps'>
+   			<list>
+   				<value>Pratik</value>
+   				<value>Nianjan</value>
+   			</list>
+   		</property>
+   </bean>   
    
 </beans>   
