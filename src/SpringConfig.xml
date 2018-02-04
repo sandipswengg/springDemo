@@ -6,9 +6,9 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
    <bean id='empBean' class ="org.sandip.springdemopckg.Emp">
-   	<property name ='empid' value='2'></property>
-   	<property name ='fname' value='Manoj'></property>
-   	<property name ='lname' value='Dalui'></property>
-   </bean>	   
+		<constructor-arg ref='itEngg'></constructor-arg>
+   </bean>
+   
+   <bean id ='itEngg' class = "org.sandip.springdemopckg.ITEngineer"></bean>	   
    
 </beans>   

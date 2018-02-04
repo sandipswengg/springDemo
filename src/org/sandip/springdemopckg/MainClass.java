@@ -5,19 +5,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainClass {
 	
+	// https://www.youtube.com/watch?v=qcjFZ_Ua8O0&index=7&list=PLBgMUB7xGcO1YY1J9NoXssmaB0FjLSbQ5
+	// ==> By constructor way:
+	
+	
 	public static void main(String[] args) {
-		Emp empobj = new Emp();
-		
-		empobj.empid = 1;
-		empobj.fname = "Sandip";
-		empobj.lname = "Sarkar";
-		
-		System.out.println("EMp details is : " + empobj);
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 		
 		Emp emp = (Emp)context.getBean("empBean"); 
-		System.out.println("EMp details is : " + emp);
+		
+		emp.getDetails();
 		
 	}
 	
