@@ -13,9 +13,11 @@ public class MainClass {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 		
-		Emp emp = (Emp)context.getBean("empBean"); 
+		Emp emp = (Emp)context.getBean("ITEmpBean"); // Generating an 
+		Emp accountEmp = (Emp)context.getBean("accountEmpBean");
 		
 		emp.getDetails();
+		accountEmp.getDetails();
 		
 	}
 	

@@ -5,10 +5,15 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
-   <bean id='empBean' class ="org.sandip.springdemopckg.Emp">
+   <bean id='ITEmpBean' class ="org.sandip.springdemopckg.Emp">
 		<constructor-arg ref='itEngg'></constructor-arg>
    </bean>
+   <bean id ='itEngg' class = "org.sandip.springdemopckg.ITEngineer"></bean>	
    
-   <bean id ='itEngg' class = "org.sandip.springdemopckg.ITEngineer"></bean>	   
+   
+   <bean id='accountEmpBean' class ="org.sandip.springdemopckg.Emp">
+		<constructor-arg ref='accountEmp'></constructor-arg>
+   </bean>
+   <bean id ='accountEmp' class = "org.sandip.springdemopckg.AccountEmp"></bean>   
    
 </beans>   
